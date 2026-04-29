@@ -126,20 +126,24 @@
     <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <div class="flex items-center justify-between px-6 py-4 max-w-[1280px] mx-auto">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+                <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-primary/20">
                     <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg"/>
                 </div>
-                <span class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">Ali Azgar Sagar</span>
+                <span class="text-xl font-bold text-slate-900 dark:text-white font-['Plus_Jakarta_Sans'] tracking-tight">Ali Azgar Sagar</span>
             </div>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#goals">Goals</a>
-                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#education">Education</a>
-                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#heritage">Family</a>
-                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+                <a class="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors" href="#goals">Goals</a>
+                <a class="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors" href="#education">Education</a>
+                <a class="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors" href="#heritage">Family</a>
+                <a class="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors" href="#contact">Contact</a>
             </div>
             <div class="flex items-center gap-4">
-                <a class="hidden md:inline-block text-primary font-['Plus_Jakarta_Sans'] font-semibold hover:text-indigo-600 transition-colors active:scale-95" href="mailto:contact@aliazgarsagar.com">Get in Touch</a>
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 p-2">
+                <button id="theme-toggle" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:scale-90 text-slate-600 dark:text-slate-400">
+                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary-container text-white rounded-xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95 text-sm" href="mailto:contact@aliazgarsagar.com">Get in Touch</a>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
@@ -454,6 +458,33 @@
         mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
         mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
         mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Navbar Scroll Effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('border-slate-200', 'dark:border-slate-800', 'shadow-md');
+                nav.classList.remove('border-white/40');
+            } else {
+                nav.classList.remove('border-slate-200', 'dark:border-slate-800', 'shadow-md');
+                nav.classList.add('border-white/40');
+            }
+        });
     </script>
 </body>
 </html>
