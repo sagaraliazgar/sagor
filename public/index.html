@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Ali Azgar Sagar | Purpose-Driven Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Hind+Siliguri:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Hind+Siliguri:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -92,42 +97,114 @@
         :root {
             --section-padding: 60px;
         }
+
         @media (min-width: 768px) {
             :root {
                 --section-padding: 100px;
             }
         }
-        body { background-color: #f9f9f9; color: #1a1c1c; overflow-x: hidden; }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
-        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
-        .bento-card { grid-column: span 12; }
-        @media (min-width: 768px) { .bento-card-md-6 { grid-column: span 6; } .bento-card-md-4 { grid-column: span 4; } .bento-card-md-8 { grid-column: span 8; } }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .bg-blur-blob { position: absolute; filter: blur(100px); opacity: 0.15; z-index: -10; border-radius: 9999px; }
-        
+
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .bento-card {
+            grid-column: span 12;
+        }
+
+        @media (min-width: 768px) {
+            .bento-card-md-6 {
+                grid-column: span 6;
+            }
+
+            .bento-card-md-4 {
+                grid-column: span 4;
+            }
+
+            .bento-card-md-8 {
+                grid-column: span 8;
+            }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bg-blur-blob {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -10;
+            border-radius: 9999px;
+        }
+
         /* Smooth transitions */
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Floating Animations */
         @keyframes float-slow-up {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
+
         @keyframes float-slow-down {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
         }
-        .animate-float-up { animation: float-slow-up 8s ease-in-out infinite; }
-        .animate-float-down { animation: float-slow-down 10s ease-in-out infinite; }
+
+        .animate-float-up {
+            animation: float-slow-up 8s ease-in-out infinite;
+        }
+
+        .animate-float-down {
+            animation: float-slow-down 10s ease-in-out infinite;
+        }
     </style>
 </head>
+
 <body class="font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-        <div class="flex items-center justify-between px-6 py-4 max-w-[1280px] mx-auto">
+    <nav class="fixed top-6 left-6 right-6 z-50 transition-all duration-500 max-w-[1280px] mx-auto">
+        <div class="glass-card rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-xl border-white/20">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-primary/20">
-                    <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg"/>
+                <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-primary/10">
+                    <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg" />
                 </div>
                 <span class="text-xl font-bold text-slate-900 dark:text-white font-['Plus_Jakarta_Sans'] tracking-tight">Ali Azgar Sagar</span>
             </div>
@@ -142,8 +219,8 @@
                     <span class="material-symbols-outlined dark:hidden">dark_mode</span>
                     <span class="material-symbols-outlined hidden dark:block">light_mode</span>
                 </button>
-                <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary-container text-white rounded-xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95 text-sm" href="mailto:contact@aliazgarsagar.com">Get in Touch</a>
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary-container text-white rounded-xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95 text-xs uppercase tracking-widest" href="mailto:contact@aliazgarsagar.com">Get in Touch</a>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-400 p-2">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
@@ -152,7 +229,8 @@
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="fixed inset-0 z-[60] md:hidden invisible opacity-0 transition-all duration-300">
             <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-[300px] bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-10 translate-x-full transition-transform duration-500 ease-out z-20 backdrop-blur-xl" id="mobile-menu-content">
+            <div class="absolute right-0 top-0 bottom-0 w-[300px] bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-10 translate-x-full transition-transform duration-500 ease-out z-20 backdrop-blur-xl"
+                id="mobile-menu-content">
                 <div class="flex justify-between items-center">
                     <span class="text-xl font-bold text-slate-900 dark:text-white">Menu</span>
                     <button id="mobile-menu-close" class="p-2 text-slate-500">
@@ -160,10 +238,14 @@
                     </button>
                 </div>
                 <div class="flex flex-col gap-6">
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95" href="#goals">Life Goals</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95" href="#education">Education</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95" href="#heritage">Heritage</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95" href="#contact">Contact</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95"
+                        href="#goals">Life Goals</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95"
+                        href="#education">Education</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95"
+                        href="#heritage">Heritage</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors active:scale-95"
+                        href="#contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -176,22 +258,31 @@
         <section class="max-w-[1280px] mx-auto px-6 mb-24 reveal">
             <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
                 <div class="flex-1 space-y-6 text-center md:text-left flex flex-col items-center md:items-start">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container w-fit">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container w-fit">
                         <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                        <span class="font-label-caps text-[10px] uppercase tracking-widest font-bold">Welcome to my world</span>
+                        <span class="font-label-caps text-[10px] uppercase tracking-widest font-bold">Welcome to my
+                            world</span>
                     </div>
-                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-on-background leading-tight">Ali Azgar Sagar</h1>
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-on-background leading-tight">Ali Azgar
+                        Sagar</h1>
                     <p class="font-body-lg text-lg md:text-xl text-on-surface-variant max-w-xl">
-                        Building a legacy through purpose-driven achievement. A journey defined by academic excellence, social responsibility, and unwavering dedication to growth.
+                        Building a legacy through purpose-driven achievement. A journey defined by academic excellence,
+                        social responsibility, and unwavering dedication to growth.
                     </p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <a href="#goals" class="px-8 py-4 bg-primary-container text-on-primary rounded-xl font-bold hover:shadow-xl hover:-translate-y-1 transition-all">MY VISION</a>
-                        <a href="#education" class="px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-bold hover:bg-surface-container transition-all">LEARN MORE</a>
+                        <a href="#goals"
+                            class="px-8 py-4 bg-primary-container text-on-primary rounded-xl font-bold hover:shadow-xl hover:-translate-y-1 transition-all">MY
+                            VISION</a>
+                        <a href="#education"
+                            class="px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-bold hover:bg-surface-container transition-all">LEARN
+                            MORE</a>
                     </div>
                 </div>
                 <div class="flex-1 relative w-full max-w-md md:max-w-none">
-                    <div class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl rotate-0 md:rotate-3 scale-95 border-8 border-white">
-                        <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg"/>
+                    <div
+                        class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl rotate-0 md:rotate-3 scale-95 border-8 border-white">
+                        <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg" />
                     </div>
                 </div>
             </div>
@@ -200,86 +291,119 @@
         <section class="max-w-[1280px] mx-auto px-6 py-20 bg-surface-container-low rounded-[40px] mb-24 reveal">
             <h2 class="font-headline-lg text-4xl text-center mb-12">Captured Moments</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-up">
-                    <img alt="Moment 1" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"/>
+                <div
+                    class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-up">
+                    <img alt="Moment 1" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-8 animate-float-down" style="animation-delay: 1s;">
-                    <img alt="Moment 2" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400"/>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-8 animate-float-down"
+                    style="animation-delay: 1s;">
+                    <img alt="Moment 2" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm animate-float-up" style="animation-delay: 2s;">
-                    <img alt="Moment 3" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&q=80&w=400"/>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm animate-float-up"
+                    style="animation-delay: 2s;">
+                    <img alt="Moment 3" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&q=80&w=400" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-12 animate-float-down" style="animation-delay: 1.5s;">
-                    <img alt="Moment 4" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"/>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-12 animate-float-down"
+                    style="animation-delay: 1.5s;">
+                    <img alt="Moment 4" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm animate-float-up" style="animation-delay: 0.5s;">
-                    <img alt="Moment 5" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400"/>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm animate-float-up"
+                    style="animation-delay: 0.5s;">
+                    <img alt="Moment 5" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-4 animate-float-down" style="animation-delay: 2.5s;">
-                    <img alt="Moment 6" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=400"/>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-4 animate-float-down"
+                    style="animation-delay: 2.5s;">
+                    <img alt="Moment 6" class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=400" />
                 </div>
             </div>
         </section>
 
         <section id="goals" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
             <div class="mb-12 text-center md:text-left">
-                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The Foundation</span>
+                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The
+                    Foundation</span>
                 <h2 class="font-headline-lg text-4xl mt-2">Core Life Goals</h2>
             </div>
             <div class="bento-grid">
-                <div class="bento-card bento-card-md-8 glass-card p-10 rounded-[32px] border border-outline-variant flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-lg group">
+                <div
+                    class="bento-card bento-card-md-8 glass-card p-10 rounded-[32px] border border-outline-variant flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-lg group">
                     <div class="flex justify-between items-start">
-                        <div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center text-white">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">payments</span>
                         </div>
-                        <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                     </div>
                     <div class="mt-20">
                         <h3 class="font-headline-md text-3xl mb-2">Earning money</h3>
-                        <p class="text-on-surface-variant text-lg">Building financial independence to create a sustainable platform for broader impact and personal freedom.</p>
+                        <p class="text-on-surface-variant text-lg">Building financial independence to create a
+                            sustainable platform for broader impact and personal freedom.</p>
                     </div>
                 </div>
-                <div class="bento-card bento-card-md-4 bg-slate-900 p-10 rounded-[32px] text-white flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-xl">
+                <div
+                    class="bento-card bento-card-md-4 bg-slate-900 p-10 rounded-[32px] text-white flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-xl">
                     <div class="w-14 h-14 rounded-2xl bg-indigo-500 flex items-center justify-center">
                         <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
                     </div>
                     <div class="mt-12">
                         <h3 class="font-headline-md text-2xl mb-2">Prestigious degree</h3>
-                        <p class="text-slate-400">Pursuing academic excellence at the highest level to unlock doors of opportunity.</p>
+                        <p class="text-slate-400">Pursuing academic excellence at the highest level to unlock doors of
+                            opportunity.</p>
                     </div>
                 </div>
-                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
-                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                <div
+                    class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
                         <span class="material-symbols-outlined">favorite</span>
                     </div>
                     <h3 class="font-headline-md text-xl mb-2">Supporting parents</h3>
-                    <p class="text-sm text-on-surface-variant">Giving back to those who gave everything. A primary mission of gratitude.</p>
+                    <p class="text-sm text-on-surface-variant">Giving back to those who gave everything. A primary
+                        mission of gratitude.</p>
                 </div>
-                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
-                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                <div
+                    class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
                         <span class="material-symbols-outlined">volunteer_activism</span>
                     </div>
                     <h3 class="font-headline-md text-xl mb-2">Helping needy people</h3>
-                    <p class="text-sm text-on-surface-variant">Using success as a tool for social equity and providing support where it's most needed.</p>
+                    <p class="text-sm text-on-surface-variant">Using success as a tool for social equity and providing
+                        support where it's most needed.</p>
                 </div>
-                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
-                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                <div
+                    class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
                         <span class="material-symbols-outlined">groups</span>
                     </div>
                     <h3 class="font-headline-md text-xl mb-2">Serving others</h3>
-                    <p class="text-sm text-on-surface-variant">Living a life of purpose through service and contributing to the community's well-being.</p>
+                    <p class="text-sm text-on-surface-variant">Living a life of purpose through service and contributing
+                        to the community's well-being.</p>
                 </div>
             </div>
         </section>
 
         <section id="education" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
             <div class="mb-12 text-center">
-                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The Roadmap</span>
+                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The
+                    Roadmap</span>
                 <h2 class="font-headline-lg text-4xl mt-2">Academic Journey</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] transition-all group-hover:scale-150"></div>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] transition-all group-hover:scale-150">
+                    </div>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="px-4 py-1 bg-primary text-white rounded-full text-xs font-bold">2024</div>
                         <span class="text-on-surface-variant text-sm font-semibold">HSC</span>
@@ -288,14 +412,18 @@
                     <div class="flex items-center gap-6">
                         <div>
                             <div class="text-4xl font-black text-primary">5.00</div>
-                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA Achieved</div>
+                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA
+                                Achieved</div>
                         </div>
                         <div class="h-10 w-px bg-outline-variant"></div>
                         <div class="text-on-surface-variant italic font-medium">HSC Examination</div>
                     </div>
                 </div>
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-bl-[100px] transition-all group-hover:scale-150"></div>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-bl-[100px] transition-all group-hover:scale-150">
+                    </div>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="px-4 py-1 bg-slate-700 text-white rounded-full text-xs font-bold">2022</div>
                         <span class="text-on-surface-variant text-sm font-semibold">SSC</span>
@@ -304,7 +432,8 @@
                     <div class="flex items-center gap-6">
                         <div>
                             <div class="text-4xl font-black text-slate-700">5.00</div>
-                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA Achieved</div>
+                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA
+                                Achieved</div>
                         </div>
                         <div class="h-10 w-px bg-outline-variant"></div>
                         <div class="text-on-surface-variant italic font-medium">SSC Examination</div>
@@ -316,21 +445,26 @@
         <section id="heritage" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
             <div class="glass-card rounded-[3rem] p-10 md:p-20 overflow-hidden relative border-white/60">
                 <div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none hidden lg:block">
-                    <span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">family_restroom</span>
+                    <span
+                        class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">family_restroom</span>
                 </div>
                 <div class="relative z-10">
-                    <span class="font-label-caps text-label-caps text-indigo-600 tracking-widest uppercase font-bold">The Roots</span>
+                    <span
+                        class="font-label-caps text-label-caps text-indigo-600 tracking-widest uppercase font-bold">The
+                        Roots</span>
                     <h2 class="font-headline-lg text-4xl md:text-5xl mt-4 mb-12">Heritage &amp; Family</h2>
                     <div class="grid md:grid-cols-2 gap-12">
                         <div class="space-y-4">
                             <div class="text-xs font-black uppercase tracking-widest text-indigo-500">Father</div>
                             <div class="text-3xl font-bold text-on-background">Hafizur Rahman Hablu</div>
-                            <p class="text-on-surface-variant text-lg">The source of strength, integrity, and the work ethic that fuels my professional drive every day.</p>
+                            <p class="text-on-surface-variant text-lg">The source of strength, integrity, and the work
+                                ethic that fuels my professional drive every day.</p>
                         </div>
                         <div class="space-y-4">
                             <div class="text-xs font-black uppercase tracking-widest text-indigo-500">Mother</div>
                             <div class="text-3xl font-bold text-on-background">Aklima Khatun Beauty</div>
-                            <p class="text-on-surface-variant text-lg">The anchor of compassion, kindness, and the emotional intelligence that guides my service to others.</p>
+                            <p class="text-on-surface-variant text-lg">The anchor of compassion, kindness, and the
+                                emotional intelligence that guides my service to others.</p>
                         </div>
                     </div>
                 </div>
@@ -340,20 +474,28 @@
         <section id="hobbies" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
             <h2 class="font-headline-lg text-4xl text-center mb-12">Life Beyond Work</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
-                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">flight_takeoff</span>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span
+                        class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">flight_takeoff</span>
                     <span class="font-bold text-xl">Travelling</span>
                 </div>
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
-                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">groups</span>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span
+                        class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">groups</span>
                     <span class="font-bold text-xl">Socializing</span>
                 </div>
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
-                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_cricket</span>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span
+                        class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_cricket</span>
                     <span class="font-bold text-xl">Cricket</span>
                 </div>
-                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
-                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_soccer</span>
+                <div
+                    class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span
+                        class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_soccer</span>
                     <span class="font-bold text-xl">Football</span>
                 </div>
             </div>
@@ -363,12 +505,16 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="space-y-8 text-center md:text-left flex flex-col items-center md:items-start">
                     <div>
-                        <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">Reach Out</span>
+                        <span
+                            class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">Reach
+                            Out</span>
                         <h2 class="font-headline-lg text-4xl mt-2">Let's Connect</h2>
                     </div>
                     <div class="space-y-6 w-full">
-                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
-                            <div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
                                 <span class="material-symbols-outlined">location_on</span>
                             </div>
                             <div>
@@ -376,31 +522,33 @@
                                 <div class="text-on-surface-variant">3/1 Jigatola, Dhanmondi, Dhaka</div>
                             </div>
                         </div>
-                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
-                            <div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
                                 <span class="material-symbols-outlined">call</span>
                             </div>
                             <div>
                                 <div class="font-bold text-on-surface">Phone Number</div>
-                                <a href="tel:01750241612" class="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg">01750241612</a>
+                                <a href="tel:01750241612"
+                                    class="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg">01750241612</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex gap-4 w-full">
-                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1877F2] text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg" href="https://www.facebook.com/share/1BorJ9czCD/" target="_blank">
+                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1877F2] text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg"
+                            href="https://www.facebook.com/share/1BorJ9czCD/" target="_blank">
                             <span class="material-symbols-outlined">public</span> Facebook
                         </a>
-                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg" href="https://www.instagram.com/sagar23__28" target="_blank">
+                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg"
+                            href="https://www.instagram.com/sagar23__28" target="_blank">
                             <span class="material-symbols-outlined">photo_camera</span> Instagram
                         </a>
                     </div>
                 </div>
                 <div class="rounded-[3rem] overflow-hidden border border-outline-variant shadow-2xl h-[500px]">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed" 
-                        class="w-full h-full border-0" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                    <iframe src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed"
+                        class="w-full h-full border-0" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
@@ -408,16 +556,21 @@
     </main>
 
     <footer class="bg-slate-50 border-t border-slate-200">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8 px-8 py-20 max-w-[1280px] mx-auto font-['Plus_Jakarta_Sans'] text-sm">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8 px-8 py-20 max-w-[1280px] mx-auto font-['Plus_Jakarta_Sans'] text-sm">
             <div class="space-y-4 text-center md:text-left">
                 <div class="font-bold text-slate-900 text-2xl">Ali Azgar Sagar</div>
                 <p class="text-slate-500 font-medium">© 2024 Ali Azgar Sagar. Built with purpose & focus.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-8">
-                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#goals">Goals</a>
-                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#education">Education</a>
-                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#heritage">Heritage</a>
-                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#contact">Contact</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]"
+                    href="#goals">Goals</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]"
+                    href="#education">Education</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]"
+                    href="#heritage">Heritage</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]"
+                    href="#contact">Contact</a>
             </div>
         </div>
     </footer>
@@ -477,14 +630,15 @@
         // Navbar Scroll Effect
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                nav.classList.add('border-slate-200', 'dark:border-slate-800', 'shadow-md');
-                nav.classList.remove('border-white/40');
+            if (window.scrollY > 40) {
+                nav.classList.remove('top-6');
+                nav.classList.add('top-2', 'scale-95');
             } else {
-                nav.classList.remove('border-slate-200', 'dark:border-slate-800', 'shadow-md');
-                nav.classList.add('border-white/40');
+                nav.classList.add('top-6');
+                nav.classList.remove('top-2', 'scale-95');
             }
         });
     </script>
 </body>
+
 </html>
