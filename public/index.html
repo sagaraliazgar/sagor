@@ -204,10 +204,30 @@
         .animate-float-down {
             animation: float-slow-down 10s ease-in-out infinite;
         }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            mix-blend-mode: difference;
+            transition: transform 0.15s ease-out;
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .cursor-dot { display: block; }
+            body { cursor: none; }
+            a, button { cursor: none; }
+        }
     </style>
 </head>
 
 <body class="font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+    <div class="cursor-dot" id="cursor"></div>
     <nav class="fixed top-6 left-6 right-6 z-50 transition-all duration-500 max-w-[1280px] mx-auto">
         <div class="glass-card rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-xl border-white/20">
             <div class="flex items-center gap-3">
@@ -670,6 +690,24 @@
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        if (window.innerWidth >= 1024) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.8)');
+            document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
+
+            const hoverables = document.querySelectorAll('a, button, .bento-card');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(4)');
+                el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+            });
+        }
     </script>
 </body>
 
