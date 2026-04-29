@@ -71,7 +71,7 @@
                         "full": "9999px"
                     },
                     "spacing": {
-                        "section-padding": "100px",
+                        "section-padding": "var(--section-padding)",
                         "stack-lg": "32px",
                         "stack-sm": "8px",
                         "unit": "8px",
@@ -112,9 +112,29 @@
                     <span class="material-symbols-outlined hidden dark:block">light_mode</span>
                 </button>
                 <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary rounded-lg font-semibold hover:bg-surface-tint transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 active:scale-95" href="#contact">Contact Me</a>
-                <button class="md:hidden text-slate-600 dark:text-slate-300">
-                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
                 </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] md:hidden invisible opacity-0 transition-all duration-500">
+            <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-3/4 max-w-sm bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-10 translate-x-full transition-transform duration-500 ease-out" id="mobile-menu-content">
+                <div class="flex justify-between items-center">
+                    <span class="text-xl font-bold text-slate-900 dark:text-white">Menu</span>
+                    <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#core-values">Core Values</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#education">Education</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#family">Family</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#hobbies">Hobbies</a>
+                </div>
+                <a class="mt-auto inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-indigo-500/30" href="#contact">Contact Me</a>
             </div>
         </div>
     </nav>
@@ -130,11 +150,11 @@
                         <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
                         <span class="font-bold text-xs text-on-surface-variant tracking-widest uppercase">Welcome to my world</span>
                     </div>
-                    <h1 class="font-display text-7xl md:text-8xl text-on-background dark:text-white leading-tight">
+                    <h1 class="font-display text-5xl md:text-8xl text-on-background dark:text-white leading-tight">
                         Driven by <span class="gradient-text relative inline-block">Purpose</span>,<br/>
                         Guided by <span class="text-secondary dark:text-secondary-fixed-dim">Values</span>.
                     </h1>
-                    <p class="font-body-lg text-xl text-on-surface-variant dark:text-slate-400 max-w-2xl leading-relaxed">
+                    <p class="font-body-lg text-lg md:text-xl text-on-surface-variant dark:text-slate-400 max-w-2xl leading-relaxed">
                         I am Ali Azgar Sagar. This space is dedicated to my journey, my family, and the core principles that drive me every day.
                     </p>
                     <div class="flex flex-wrap items-center gap-stack-md pt-6">
@@ -411,7 +431,7 @@
                     </div>
                     <div class="flex-1 bg-indigo-600 p-12 lg:p-20 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-primary opacity-50 mix-blend-overlay"></div>
-                        <div class="w-full max-w-sm aspect-[4/5] bg-white dark:bg-slate-700 p-6 shadow-2xl rotate-3 relative z-10 rounded-2xl group transition-transform duration-500 hover:rotate-0">
+                        <div class="w-full max-w-sm aspect-[4/5] bg-white dark:bg-slate-700 p-6 shadow-2xl rotate-0 md:rotate-3 relative z-10 rounded-2xl group transition-transform duration-500 hover:rotate-0">
                             <iframe 
                                 src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed" 
                                 class="w-full h-full object-cover rounded-lg border-0 pointer-events-auto" 
@@ -487,6 +507,34 @@
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = document.getElementById('mobile-menu-content');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        function toggleMobileMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('invisible', 'opacity-0');
+                mobileMenu.classList.add('visible', 'opacity-100');
+                mobileMenuContent.classList.remove('translate-x-full');
+            } else {
+                mobileMenu.classList.remove('visible', 'opacity-100');
+                mobileMenu.classList.add('invisible', 'opacity-0');
+                mobileMenuContent.classList.add('translate-x-full');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+        mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
         });
     </script>
 </body>

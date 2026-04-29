@@ -1,6 +1,13 @@
 /* Custom Design System Enhancements */
 :root {
     --primary-glow: conic-gradient(from 180deg at 50% 50%, #4d44e3 0deg, #3525cd 55deg, #4f46e5 120deg, #3323cc 160deg, transparent 360deg);
+    --section-padding: 60px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --section-padding: 100px;
+    }
 }
 
 @keyframes float {
