@@ -583,6 +583,11 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-40 p-4 rounded-full bg-primary text-white shadow-2xl invisible opacity-0 translate-y-10 transition-all duration-500 hover:-translate-y-1 active:scale-90 group">
+        <span class="material-symbols-outlined transition-transform group-hover:-translate-y-1">arrow_upward</span>
+    </button>
+
     <script>
         // Scroll Reveal
         const revealElements = document.querySelectorAll('.reveal');
@@ -659,6 +664,22 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Back to Top Logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('invisible', 'opacity-0', 'translate-y-10');
+                backToTopBtn.classList.add('visible', 'opacity-100', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('invisible', 'opacity-0', 'translate-y-10');
+                backToTopBtn.classList.remove('visible', 'opacity-100', 'translate-y-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
