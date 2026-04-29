@@ -640,17 +640,25 @@
             localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        // Smart Navbar: Hide on scroll down, show on scroll up
+        // Smart Navbar: Hide on scroll down, show on scroll up with tolerance
         let lastScrollY = window.scrollY;
         const nav = document.querySelector('nav');
+        const scrollThreshold = 10; // Minimum scroll before hiding
 
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
+            
+            // Calculate scroll distance
+            const scrollDiff = currentScrollY - lastScrollY;
 
-            // Hide/Show logic
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            if (currentScrollY <= 0) {
+                // At the very top
+                nav.classList.remove('-translate-y-full');
+            } else if (scrollDiff > scrollThreshold && currentScrollY > 100) {
+                // Scrolling down past threshold
                 nav.classList.add('-translate-y-full');
-            } else {
+            } else if (scrollDiff < -scrollThreshold) {
+                // Scrolling up past threshold
                 nav.classList.remove('-translate-y-full');
             }
 
