@@ -1,68 +1,65 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ali Azgar Sagar - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <title>Ali Azgar Sagar | Purpose-Driven Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Hind+Siliguri:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-error-container": "#93000a",
-                        "surface-container-highest": "#e2e2e2",
-                        "on-primary-fixed-variant": "#3323cc",
-                        "error": "#ba1a1a",
-                        "primary-fixed": "#e2dfff",
-                        "on-tertiary": "#ffffff",
-                        "inverse-surface": "#2f3131",
-                        "tertiary": "#46494b",
-                        "on-tertiary-fixed-variant": "#444749",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-container": "#57657a",
-                        "tertiary-fixed-dim": "#c4c7c9",
-                        "primary-container": "#4f46e5",
-                        "surface-bright": "#f9f9f9",
                         "on-surface-variant": "#464555",
-                        "surface": "#f9f9f9",
-                        "surface-container": "#eeeeee",
-                        "surface-container-low": "#f3f3f4",
-                        "tertiary-fixed": "#e0e3e5",
-                        "surface-container-high": "#e8e8e8",
-                        "primary-fixed-dim": "#c3c0ff",
-                        "secondary-fixed": "#d5e3fc",
-                        "on-error": "#ffffff",
-                        "background": "#f9f9f9",
-                        "surface-dim": "#dadada",
-                        "surface-tint": "#4d44e3",
-                        "outline-variant": "#c7c4d8",
-                        "on-secondary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "secondary": "#515f74",
-                        "primary": "#3525cd",
-                        "on-tertiary-container": "#dadcde",
-                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d2e1fa",
+                        "error": "#ba1a1a",
                         "on-primary-fixed": "#0f0069",
-                        "secondary-fixed-dim": "#b9c7df",
-                        "on-surface": "#1a1c1c",
-                        "tertiary-container": "#5e6163",
-                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-container": "#b1afff",
+                        "tertiary": "#2f3334",
                         "surface-variant": "#e2e2e2",
-                        "secondary-container": "#d5e3fc",
-                        "on-primary-container": "#dad7ff",
-                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e1e3e5",
+                        "surface-container-high": "#e8e8e8",
                         "on-secondary-fixed": "#0d1c2e",
-                        "on-background": "#1a1c1c",
-                        "outline": "#777587",
+                        "primary": "#1e00a9",
+                        "inverse-primary": "#c3c0ff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#3a485c",
                         "on-primary": "#ffffff",
-                        "inverse-on-surface": "#f0f1f1"
+                        "surface-tint": "#4d44e3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-container": "#b6b8ba",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#556379",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed": "#d5e3fc",
+                        "outline-variant": "#c7c4d8",
+                        "tertiary-container": "#46494b",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-error": "#ffffff",
+                        "outline": "#777587",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#191c1e",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-fixed-dim": "#c5c7c9",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "primary-fixed": "#e2dfff",
+                        "primary-container": "#3525cd",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "secondary": "#515f74"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -71,418 +68,345 @@
                         "full": "9999px"
                     },
                     "spacing": {
-                        "section-padding": "var(--section-padding)",
-                        "stack-lg": "32px",
+                        "container-max": "1280px",
                         "stack-sm": "8px",
+                        "section-padding": "var(--section-padding)",
+                        "gutter": "24px",
                         "unit": "8px",
                         "stack-md": "16px",
-                        "gutter": "24px",
-                        "container-max": "1280px"
+                        "stack-lg": "32px"
                     },
                     "fontFamily": {
-                        "label-caps": ["Inter"],
-                        "display": ["Hind Siliguri"],
-                        "headline-lg": ["Hind Siliguri"],
-                        "body-lg": ["Inter"],
                         "body-md": ["Inter"],
-                        "headline-md": ["Hind Siliguri"]
+                        "headline-lg": ["Hind Siliguri"],
+                        "headline-md": ["Hind Siliguri"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Plus Jakarta Sans"]
                     }
-                }
-            }
+                },
+            },
         }
     </script>
+    <style>
+        :root {
+            --section-padding: 60px;
+        }
+        @media (min-width: 768px) {
+            :root {
+                --section-padding: 100px;
+            }
+        }
+        body { background-color: #f9f9f9; color: #1a1c1c; overflow-x: hidden; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+        .bento-card { grid-column: span 12; }
+        @media (min-width: 768px) { .bento-card-md-6 { grid-column: span 6; } .bento-card-md-4 { grid-column: span 4; } .bento-card-md-8 { grid-column: span 8; } }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-blur-blob { position: absolute; filter: blur(100px); opacity: 0.15; z-index: -10; border-radius: 9999px; }
+        
+        /* Smooth transitions */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
-<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container dark:bg-black dark:text-white transition-colors duration-500">
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50 shadow-sm font-sans tracking-tight antialiased">
-        <div class="max-w-[1280px] mx-auto px-8 flex justify-between items-center h-20">
-            <a class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-500 transition-all duration-300 active:scale-95 flex items-center gap-2" href="#">
-                <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white text-sm">AS</span>
-                Ali Azgar Sagar
-            </a>
-            <div class="hidden md:flex items-center gap-gutter">
-                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#core-values">Core Values</a>
-                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#education">Education</a>
-                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#family">Family</a>
-                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#hobbies">Hobbies</a>
+<body class="font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+        <div class="flex items-center justify-between px-6 py-4 max-w-[1280px] mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+                    <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg"/>
+                </div>
+                <span class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">Ali Azgar Sagar</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#goals">Goals</a>
+                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#education">Education</a>
+                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#heritage">Family</a>
+                <a class="text-slate-600 font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
             </div>
             <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-                </button>
-                <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary rounded-lg font-semibold hover:bg-surface-tint transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 active:scale-95" href="#contact">Contact Me</a>
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
-                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                <a class="hidden md:inline-block text-primary font-['Plus_Jakarta_Sans'] font-semibold hover:text-indigo-600 transition-colors active:scale-95" href="mailto:contact@aliazgarsagar.com">Get in Touch</a>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 p-2">
+                    <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="fixed inset-0 z-[60] md:hidden invisible opacity-0 transition-all duration-500">
             <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
             <div class="absolute right-0 top-0 bottom-0 w-3/4 max-w-sm bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-10 translate-x-full transition-transform duration-500 ease-out" id="mobile-menu-content">
                 <div class="flex justify-between items-center">
                     <span class="text-xl font-bold text-slate-900 dark:text-white">Menu</span>
-                    <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+                    <button id="mobile-menu-close" class="p-2 text-slate-500">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
                 <div class="flex flex-col gap-6">
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#core-values">Core Values</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#education">Education</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#family">Family</a>
-                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300 hover:text-primary transition-colors" href="#hobbies">Hobbies</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300" href="#goals">Life Goals</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300" href="#education">Education</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300" href="#heritage">Heritage</a>
+                    <a class="text-2xl font-semibold text-slate-700 dark:text-slate-300" href="#contact">Contact</a>
                 </div>
-                <a class="mt-auto inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-indigo-500/30" href="#contact">Contact Me</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="min-h-[90vh] flex items-center justify-center px-8 py-section-padding relative overflow-hidden">
-            <div class="absolute top-0 right-0 -z-10 w-[60vw] h-[60vw] bg-primary-container/20 rounded-full blur-[120px] opacity-60 translate-x-1/3 -translate-y-1/4 animate-pulse"></div>
-            <div class="absolute bottom-0 left-0 -z-10 w-[50vw] h-[50vw] bg-secondary-container/30 rounded-full blur-[100px] opacity-60 -translate-x-1/4 translate-y-1/4 animate-pulse"></div>
-            <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-section-padding w-full">
-                <div class="flex-1 flex flex-col items-center md:items-start gap-stack-lg text-center md:text-left relative z-10 reveal">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-outline-variant w-fit shadow-sm mx-auto md:mx-0">
-                        <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
-                        <span class="font-bold text-xs text-on-surface-variant tracking-widest uppercase">Welcome to my world</span>
+    <main class="relative pt-32 overflow-hidden">
+        <div class="bg-blur-blob bg-primary w-[500px] h-[500px] -top-24 -left-24"></div>
+        <div class="bg-blur-blob bg-secondary w-[400px] h-[400px] top-1/2 -right-24"></div>
+
+        <section class="max-w-[1280px] mx-auto px-6 mb-24 reveal">
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                <div class="flex-1 space-y-6 text-center md:text-left flex flex-col items-center md:items-start">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container w-fit">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="font-label-caps text-[10px] uppercase tracking-widest font-bold">Welcome to my world</span>
                     </div>
-                    <h1 class="font-display text-5xl md:text-8xl text-on-background dark:text-white leading-tight">
-                        Driven by <span class="gradient-text relative inline-block">Purpose</span>,<br/>
-                        Guided by <span class="text-secondary dark:text-secondary-fixed-dim">Values</span>.
-                    </h1>
-                    <p class="font-body-lg text-lg md:text-xl text-on-surface-variant dark:text-slate-400 max-w-2xl leading-relaxed">
-                        I am Ali Azgar Sagar. This space is dedicated to my journey, my family, and the core principles that drive me every day.
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-on-background leading-tight">Ali Azgar Sagar</h1>
+                    <p class="font-body-lg text-lg md:text-xl text-on-surface-variant max-w-xl">
+                        Building a legacy through purpose-driven achievement. A journey defined by academic excellence, social responsibility, and unwavering dedication to growth.
                     </p>
-                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-stack-md pt-6">
-                        <a class="inline-flex items-center justify-center px-10 py-5 bg-primary text-on-primary rounded-xl font-bold hover:bg-surface-tint transition-all duration-300 shadow-[0_10px_25px_rgba(53,37,205,0.3)] hover:shadow-[0_15px_35px_rgba(53,37,205,0.4)] hover:-translate-y-1.5 active:scale-95 gap-3" href="#core-values">
-                            Explore My Journey
-                            <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#goals" class="px-8 py-4 bg-primary-container text-on-primary rounded-xl font-bold hover:shadow-xl hover:-translate-y-1 transition-all">MY VISION</a>
+                        <a href="#education" class="px-8 py-4 border border-outline-variant text-on-surface rounded-xl font-bold hover:bg-surface-container transition-all">LEARN MORE</a>
+                    </div>
+                </div>
+                <div class="flex-1 relative w-full max-w-md md:max-w-none">
+                    <div class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl rotate-0 md:rotate-3 scale-95 border-8 border-white">
+                        <img alt="Ali Azgar Sagar Profile" class="w-full h-full object-cover" src="profile.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1280px] mx-auto px-6 py-20 bg-surface-container-low rounded-[40px] mb-24 reveal">
+            <h2 class="font-headline-lg text-4xl text-center mb-12">Captured Moments</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img alt="Moment 1" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-8">
+                    <img alt="Moment 2" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+                    <img alt="Moment 3" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-12">
+                    <img alt="Moment 4" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+                    <img alt="Moment 5" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm md:mt-4">
+                    <img alt="Moment 6" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=400"/>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
+            <div class="mb-12 text-center md:text-left">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The Foundation</span>
+                <h2 class="font-headline-lg text-4xl mt-2">Core Life Goals</h2>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-card bento-card-md-8 glass-card p-10 rounded-[32px] border border-outline-variant flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-lg group">
+                    <div class="flex justify-between items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+                        </div>
+                        <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                    </div>
+                    <div class="mt-20">
+                        <h3 class="font-headline-md text-3xl mb-2">Earning money</h3>
+                        <p class="text-on-surface-variant text-lg">Building financial independence to create a sustainable platform for broader impact and personal freedom.</p>
+                    </div>
+                </div>
+                <div class="bento-card bento-card-md-4 bg-slate-900 p-10 rounded-[32px] text-white flex flex-col justify-between hover:-translate-y-2 transition-transform shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-500 flex items-center justify-center">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                    </div>
+                    <div class="mt-12">
+                        <h3 class="font-headline-md text-2xl mb-2">Prestigious degree</h3>
+                        <p class="text-slate-400">Pursuing academic excellence at the highest level to unlock doors of opportunity.</p>
+                    </div>
+                </div>
+                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl mb-2">Supporting parents</h3>
+                    <p class="text-sm text-on-surface-variant">Giving back to those who gave everything. A primary mission of gratitude.</p>
+                </div>
+                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined">volunteer_activism</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl mb-2">Helping needy people</h3>
+                    <p class="text-sm text-on-surface-variant">Using success as a tool for social equity and providing support where it's most needed.</p>
+                </div>
+                <div class="bento-card bento-card-md-4 glass-card p-8 rounded-[32px] border border-outline-variant hover:border-primary/30 transition-all flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl mb-2">Serving others</h3>
+                    <p class="text-sm text-on-surface-variant">Living a life of purpose through service and contributing to the community's well-being.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
+            <div class="mb-12 text-center">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">The Roadmap</span>
+                <h2 class="font-headline-lg text-4xl mt-2">Academic Journey</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] transition-all group-hover:scale-150"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="px-4 py-1 bg-primary text-white rounded-full text-xs font-bold">2024</div>
+                        <span class="text-on-surface-variant text-sm font-semibold">HSC</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl mb-4">Madhupur Shahid Smrity College</h3>
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <div class="text-4xl font-black text-primary">5.00</div>
+                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA Achieved</div>
+                        </div>
+                        <div class="h-10 w-px bg-outline-variant"></div>
+                        <div class="text-on-surface-variant italic font-medium">HSC Examination</div>
+                    </div>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-bl-[100px] transition-all group-hover:scale-150"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="px-4 py-1 bg-slate-700 text-white rounded-full text-xs font-bold">2022</div>
+                        <span class="text-on-surface-variant text-sm font-semibold">SSC</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl mb-4">Madhupur Shahid Smrity Higher Secondary School</h3>
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <div class="text-4xl font-black text-slate-700">5.00</div>
+                            <div class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">GPA Achieved</div>
+                        </div>
+                        <div class="h-10 w-px bg-outline-variant"></div>
+                        <div class="text-on-surface-variant italic font-medium">SSC Examination</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="heritage" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
+            <div class="glass-card rounded-[3rem] p-10 md:p-20 overflow-hidden relative border-white/60">
+                <div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none hidden lg:block">
+                    <span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">family_restroom</span>
+                </div>
+                <div class="relative z-10">
+                    <span class="font-label-caps text-label-caps text-indigo-600 tracking-widest uppercase font-bold">The Roots</span>
+                    <h2 class="font-headline-lg text-4xl md:text-5xl mt-4 mb-12">Heritage &amp; Family</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <div class="text-xs font-black uppercase tracking-widest text-indigo-500">Father</div>
+                            <div class="text-3xl font-bold text-on-background">Hafizur Rahman Hablu</div>
+                            <p class="text-on-surface-variant text-lg">The source of strength, integrity, and the work ethic that fuels my professional drive every day.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="text-xs font-black uppercase tracking-widest text-indigo-500">Mother</div>
+                            <div class="text-3xl font-bold text-on-background">Aklima Khatun Beauty</div>
+                            <p class="text-on-surface-variant text-lg">The anchor of compassion, kindness, and the emotional intelligence that guides my service to others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
+            <h2 class="font-headline-lg text-4xl text-center mb-12">Life Beyond Work</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">flight_takeoff</span>
+                    <span class="font-bold text-xl">Travelling</span>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">groups</span>
+                    <span class="font-bold text-xl">Socializing</span>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_cricket</span>
+                    <span class="font-bold text-xl">Cricket</span>
+                </div>
+                <div class="p-8 rounded-[32px] bg-white border border-outline-variant flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl mb-4 text-primary group-hover:text-white transition-colors">sports_soccer</span>
+                    <span class="font-bold text-xl">Football</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-[1280px] mx-auto px-6 py-20 mb-24 reveal">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8 text-center md:text-left flex flex-col items-center md:items-start">
+                    <div>
+                        <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase font-bold">Reach Out</span>
+                        <h2 class="font-headline-lg text-4xl mt-2">Let's Connect</h2>
+                    </div>
+                    <div class="space-y-6 w-full">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
+                            <div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-on-surface">Present Address</div>
+                                <div class="text-on-surface-variant">3/1 Jigatola, Dhanmondi, Dhaka</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-2xl bg-white border border-outline-variant">
+                            <div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-on-surface">Phone Number</div>
+                                <a href="tel:01750241612" class="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg">01750241612</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 w-full">
+                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1877F2] text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg" href="https://www.facebook.com/share/1BorJ9czCD/" target="_blank">
+                            <span class="material-symbols-outlined">public</span> Facebook
+                        </a>
+                        <a class="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-xl font-bold hover:opacity-90 transition-all hover:-translate-y-1 shadow-lg" href="https://www.instagram.com/sagar23__28" target="_blank">
+                            <span class="material-symbols-outlined">photo_camera</span> Instagram
                         </a>
                     </div>
                 </div>
-                <div class="flex-1 w-full max-w-lg relative reveal" style="transition-delay: 200ms;">
-                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-2xl border border-white/20 group animate-float">
-                        <img alt="Portrait of Ali Azgar Sagar" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="profile.jpg"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
-                    </div>
-                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl flex items-center justify-center -z-10 rotate-12 animate-float" style="animation-delay: -1s;">
-                        <span class="material-symbols-outlined text-[64px] text-primary opacity-50">flare</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Core Values & Goals -->
-        <section class="py-section-padding px-8 bg-surface-container-lowest dark:bg-slate-900/50" id="core-values">
-            <div class="max-w-container-max mx-auto flex flex-col gap-16">
-                <div class="flex flex-col gap-4 items-center text-center max-w-2xl mx-auto reveal">
-                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Core Values &amp; Goals</h2>
-                    <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400">The fundamental aspirations that shape my decisions and future.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[280px]">
-                    <div class="md:col-span-2 md:row-span-2 group relative bg-white dark:bg-slate-800 rounded-3xl p-10 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-2 reveal">
-                        <div class="absolute top-0 right-0 w-80 h-80 bg-primary-container/5 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/3"></div>
-                        <div class="relative z-10 flex flex-col h-full justify-between">
-                            <div class="w-16 h-16 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-6 shadow-sm">
-                                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">payments</span>
-                            </div>
-                            <div>
-                                <h3 class="font-headline-md text-3xl text-on-background dark:text-white mb-4">Financial Independence</h3>
-                                <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400 max-w-md leading-relaxed">Building financial independence to secure the future, support my family, and have the freedom to pursue meaningful endeavors without constraint.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 100ms;">
-                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-sm">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
-                            </div>
-                            <div>
-                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Academic Excellence</h3>
-                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Achieving academic excellence from a recognized institution to build a strong foundation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 200ms;">
-                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">family_home</span>
-                            </div>
-                            <div>
-                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Support Family</h3>
-                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Giving back to those who sacrificed for me, ensuring their comfort and happiness.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 300ms;">
-                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shadow-sm">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-                            </div>
-                            <div>
-                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Social Impact</h3>
-                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Using resources to uplift those less fortunate and create positive social impact.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 group relative bg-inverse-surface rounded-3xl p-10 overflow-hidden shadow-2xl hover:shadow-indigo-900/40 transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 400ms;">
-                        <div class="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-1000">
-                            <img alt="Service background" class="w-full h-full object-cover grayscale mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUPJeG_I5WegQqhhw7p1NazPg4hZCygyJkjtFtGJUopliQR6dhqC6S-1kb8tXpBmd8MamNqhTyh15nVv9daOyZcPgvm6vhGW7e1bmHf7A-6sFYE9RsGZAeUxaaOE4kz9rJiMuGakQJipiCJvKC8tqAnhJ0sSHyxQc9nDGxWfA1c-hg9ZtS1Io2crlcQWRXepP15u7lICUESOPe7Dcu39VqBxsZsdQzU-o6n1DkkBsaDUEvR4RPZVb3-fAaowVuN5UY_VCFq8q5edI"/>
-                        </div>
-                        <div class="relative z-10 flex flex-col h-full justify-between">
-                            <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-lg text-white flex items-center justify-center mb-6 shadow-lg">
-                                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
-                            </div>
-                            <div>
-                                <h3 class="font-headline-md text-3xl text-white mb-4">Serving Others</h3>
-                                <p class="font-body-md text-lg text-slate-300 max-w-md leading-relaxed">A commitment to community and humanity, believing that true success includes leaving the world better than I found it.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section class="py-section-padding px-8 relative overflow-hidden" id="education">
-            <div class="absolute inset-0 bg-surface-container-low dark:bg-black -z-20"></div>
-            <div class="max-w-container-max mx-auto">
-                <div class="flex flex-col gap-4 items-center text-center max-w-2xl mx-auto mb-16 reveal">
-                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Education Background</h2>
-                    <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400">Consistent academic excellence throughout my school and college years.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
-                    <!-- HSC Card -->
-                    <div class="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-3xl rounded-[3rem] p-10 border border-white/20 dark:border-slate-700 shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-secondary rounded-t-full"></div>
-                        <div class="flex flex-col gap-8">
-                            <div class="flex justify-between items-start">
-                                <div class="inline-flex items-center gap-3 bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
-                                    <span class="material-symbols-outlined text-primary text-sm">school</span>
-                                    <span class="font-bold text-[10px] text-primary tracking-widest uppercase">Higher Secondary Certificate</span>
-                                </div>
-                                <div class="bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-lg text-primary font-bold text-sm">HSC</div>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-3xl text-on-background dark:text-white mb-4 leading-tight">
-                                    Madhupur Shahid Smrity College
-                                </h3>
-                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Advanced studies focusing on higher education goals and foundational excellence.</p>
-                            </div>
-                            <div class="flex items-center gap-6 pt-4 border-t border-slate-100 dark:border-slate-700">
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Achievement</span>
-                                    <span class="text-3xl font-black text-primary">GPA 5.00</span>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-indigo-500/30">
-                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SSC Card -->
-                    <div class="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-3xl rounded-[3rem] p-10 border border-white/20 dark:border-slate-700 shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary to-primary rounded-t-full"></div>
-                        <div class="flex flex-col gap-8">
-                            <div class="flex justify-between items-start">
-                                <div class="inline-flex items-center gap-3 bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
-                                    <span class="material-symbols-outlined text-primary text-sm">account_balance</span>
-                                    <span class="font-bold text-[10px] text-primary tracking-widest uppercase">Secondary School Certificate</span>
-                                </div>
-                                <div class="bg-secondary/10 dark:bg-secondary/20 px-3 py-1 rounded-lg text-secondary font-bold text-sm">SSC</div>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-3xl text-on-background dark:text-white mb-4 leading-tight">
-                                    Madhupur Shahid Smrity Higher Secondary School
-                                </h3>
-                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Foundational schooling that shaped my discipline and initial academic path.</p>
-                            </div>
-                            <div class="flex items-center gap-6 pt-4 border-t border-slate-100 dark:border-slate-700">
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Achievement</span>
-                                    <span class="text-3xl font-black text-primary">GPA 5.00</span>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-indigo-500/30">
-                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Roots -->
-        <section class="py-section-padding px-8 bg-white dark:bg-slate-900" id="family">
-            <div class="max-w-container-max mx-auto">
-                <div class="flex flex-col lg:flex-row gap-20 items-center">
-                    <div class="flex-1 w-full flex flex-col items-center md:items-start text-center md:text-left gap-12 reveal">
-                        <div class="flex flex-col gap-6">
-                            <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">My Roots</h2>
-                            <p class="font-body-lg text-xl text-on-surface-variant dark:text-slate-400 leading-relaxed">Everything I am is because of the foundation my parents built for me. They are my inspiration and my guiding light.</p>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                            <div class="flex flex-col gap-6 p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300">
-                                <div class="w-20 h-20 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-inner">
-                                    <span class="material-symbols-outlined text-[40px]">person</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-[10px] text-indigo-500 uppercase tracking-widest mb-2">Father</p>
-                                    <h3 class="font-headline-md text-2xl text-on-background dark:text-white">Hafizur Rahman Hablu</h3>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-6 p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300">
-                                <div class="w-20 h-20 rounded-full bg-pink-100 dark:bg-pink-900/50 flex items-center justify-center text-pink-600 dark:text-pink-400 shadow-inner">
-                                    <span class="material-symbols-outlined text-[40px]">person_3</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-[10px] text-pink-500 uppercase tracking-widest mb-2">Mother</p>
-                                    <h3 class="font-headline-md text-2xl text-on-background dark:text-white">Aklima Khatun Beauty</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-1 w-full max-w-lg relative reveal" style="transition-delay: 200ms;">
-                        <div class="aspect-square rounded-[3rem] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl relative z-10 rotate-3">
-                            <img alt="Family context" class="w-full h-full object-cover" src="family.jpg"/>
-                        </div>
-                        <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-primary/20 rounded-full -z-10 translate-x-1/4 -translate-y-1/4 blur-3xl opacity-50 animate-pulse"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Life Beyond Work (Hobbies) Section -->
-        <section class="py-section-padding px-8 bg-slate-50 dark:bg-black" id="hobbies">
-            <div class="max-w-container-max mx-auto flex flex-col gap-20 items-center">
-                <div class="flex flex-col gap-4 items-center reveal">
-                    <h2 class="text-xs font-black tracking-[0.3em] uppercase text-primary">Life Beyond Work</h2>
-                    <p class="text-3xl font-bold dark:text-white">Hobbies & Interests</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full max-w-5xl reveal">
-                    <div class="flex flex-col items-center gap-6 group">
-                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white">
-                            <span class="material-symbols-outlined text-[40px]">flight_takeoff</span>
-                        </div>
-                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Travelling</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-6 group">
-                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-primary group-hover:text-white">
-                            <span class="material-symbols-outlined text-[40px]">groups</span>
-                        </div>
-                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Socializing</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-6 group">
-                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white">
-                            <span class="material-symbols-outlined text-[40px]">sports_cricket</span>
-                        </div>
-                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Cricket</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-6 group">
-                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-primary group-hover:text-white">
-                            <span class="material-symbols-outlined text-[40px]">sports_soccer</span>
-                        </div>
-                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Football</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Get in Touch Section -->
-        <section class="py-section-padding px-8 bg-white dark:bg-slate-900" id="contact">
-            <div class="max-w-container-max mx-auto reveal">
-                <div class="bg-slate-50 dark:bg-slate-800 rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row">
-                    <div class="flex-1 p-16 lg:p-20 flex flex-col items-center md:items-start text-center md:text-left justify-center gap-10">
-                        <h2 class="text-5xl font-black text-slate-900 dark:text-white">Get in Touch</h2>
-                        <div class="flex flex-col gap-8 w-full">
-                            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                                <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center shadow-lg shrink-0">
-                                    <span class="material-symbols-outlined text-2xl">location_on</span>
-                                </div>
-                                <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Present Address</p>
-                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">3/1 Jigatola, Dhanmondi, Dhaka</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                                <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center shadow-lg shrink-0">
-                                    <span class="material-symbols-outlined text-2xl">call</span>
-                                </div>
-                                <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Phone Number</p>
-                                    <a href="tel:01750241612" class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug hover:text-primary transition-colors">01750241612</a>
-                                </div>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                                <div class="w-14 h-14 rounded-2xl bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center shadow-md shrink-0">
-                                    <span class="material-symbols-outlined text-2xl">home</span>
-                                </div>
-                                <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Permanent Address</p>
-                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">Madhupur, Tangail</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-1 bg-indigo-600 p-12 lg:p-20 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-primary opacity-50 mix-blend-overlay"></div>
-                        <div class="w-full max-w-sm aspect-[4/5] bg-white dark:bg-slate-700 p-6 shadow-2xl rotate-0 md:rotate-3 relative z-10 rounded-2xl group transition-transform duration-500 hover:rotate-0">
-                            <iframe 
-                                src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed" 
-                                class="w-full h-full object-cover rounded-lg border-0 pointer-events-auto" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
+                <div class="rounded-[3rem] overflow-hidden border border-outline-variant shadow-2xl h-[500px]">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full py-20 border-t mt-20 border-slate-100 dark:border-slate-800 bg-white dark:bg-black">
-        <div class="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="flex flex-col items-center md:items-start gap-4">
-                <span class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Ali Azgar Sagar</span>
-                <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">PURPOSE-DRIVEN EXCELLENCE.</p>
+    <footer class="bg-slate-50 border-t border-slate-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 px-8 py-20 max-w-[1280px] mx-auto font-['Plus_Jakarta_Sans'] text-sm">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="font-bold text-slate-900 text-2xl">Ali Azgar Sagar</div>
+                <p class="text-slate-500 font-medium">© 2024 Ali Azgar Sagar. Built with purpose & focus.</p>
             </div>
-            <div class="flex flex-col items-center gap-6">
-                <div class="flex items-center gap-8">
-                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="https://www.facebook.com/share/1BorJ9czCD/" target="_blank">Facebook</a>
-                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="https://www.instagram.com/sagar23__28?igsh=MThybXBtY2g0cDdpcA==" target="_blank">Instagram</a>
-                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">Github</a>
-                </div>
-                <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">© 2024 ALI AZGAR SAGAR. ALL RIGHTS RESERVED.</p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#goals">Goals</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#education">Education</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#heritage">Heritage</a>
+                <a class="text-slate-500 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="#contact">Contact</a>
             </div>
         </div>
     </footer>
 
-    <!-- Back to top -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 hover:-translate-y-1 active:scale-95 z-[60]">
-        <span class="material-symbols-outlined">arrow_upward</span>
-    </button>
-
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-        });
-
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        }
-
         // Scroll Reveal
         const revealElements = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
@@ -492,22 +416,7 @@
                 }
             });
         }, { threshold: 0.1 });
-
         revealElements.forEach(el => observer.observe(el));
-
-        // Back to top visibility
-        const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.remove('opacity-0', 'translate-y-10');
-            } else {
-                backToTop.classList.add('opacity-0', 'translate-y-10');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
 
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -532,10 +441,7 @@
         mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
         mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
         mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
-        
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => toggleMobileMenu(false));
-        });
+        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
     </script>
 </body>
 </html>
