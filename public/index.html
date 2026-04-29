@@ -175,36 +175,35 @@
         }
 
         /* Floating Animations */
-        @keyframes float-slow-up {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
+        @keyframes float-natural-up {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-20px) rotate(-1deg); }
         }
 
-        @keyframes float-slow-down {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(20px);
-            }
+        @keyframes float-natural-down {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(10px) rotate(-1deg); }
+            66% { transform: translateY(20px) rotate(1deg); }
         }
 
         .animate-float-up {
-            animation: float-slow-up 8s ease-in-out infinite;
+            animation: float-natural-up 12s ease-in-out infinite;
         }
 
         .animate-float-down {
-            animation: float-slow-down 10s ease-in-out infinite;
+            animation: float-natural-down 14s ease-in-out infinite;
+        }
+
+        .moment-card {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            perspective: 1000px;
+        }
+
+        .moment-card:hover {
+            transform: scale(1.05) rotateY(10deg) rotateX(-5deg) !important;
+            z-index: 10;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
         /* Custom Cursor */
@@ -343,27 +342,27 @@
             <h2 class="font-headline-lg text-4xl text-center mb-12 dark:text-white">Captured Moments</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
                 <div
-                    class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-down">
+                    class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-down opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.1s;">
                     <img alt="Personal Moment 1" class="w-full h-full object-cover" src="moment_final_1.jpg" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-8 animate-float-down"
-                    style="animation-delay: 1s;">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-8 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 1s; transition-delay: 0.2s;">
                     <img alt="Personal Moment 2" class="w-full h-full object-cover" src="moment_final_2.jpg" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-4 animate-float-down"
-                    style="animation-delay: 2s;">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-4 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 2s; transition-delay: 0.3s;">
                     <img alt="Personal Moment 3" class="w-full h-full object-cover" src="moment_final_3.jpg" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-12 animate-float-up"
-                    style="animation-delay: 1.5s;">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-12 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 1.5s; transition-delay: 0.4s;">
                     <img alt="Personal Moment 4" class="w-full h-full object-cover" src="moment_final_4.jpg" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-2 animate-float-up"
-                    style="animation-delay: 0.5s;">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-2 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 0.5s; transition-delay: 0.5s;">
                     <img alt="Personal Moment 5" class="w-full h-full object-cover" src="moment_final_5.jpg" />
                 </div>
-                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-6 animate-float-up"
-                    style="animation-delay: 2.5s;">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-6 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 2.5s; transition-delay: 0.6s;">
                     <img alt="Personal Moment 6" class="w-full h-full object-cover" src="personal_moment_6.jpg" />
                 </div>
             </div>
@@ -694,6 +693,26 @@
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Reveal items sequentially
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-item').forEach(item => {
+            revealObserver.observe(item);
         });
 
         // Smart Navbar: Hide on scroll down, show on scroll up with tolerance
