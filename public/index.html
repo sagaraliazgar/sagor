@@ -232,30 +232,63 @@
             <div class="absolute inset-0 bg-surface-container-low dark:bg-black -z-20"></div>
             <div class="max-w-container-max mx-auto">
                 <div class="flex flex-col gap-4 items-center text-center max-w-2xl mx-auto mb-16 reveal">
-                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Education Highlight</h2>
+                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Education Background</h2>
+                    <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400">Consistent academic excellence throughout my school and college years.</p>
                 </div>
-                <div class="max-w-5xl mx-auto bg-white/40 dark:bg-slate-800/40 backdrop-blur-3xl rounded-[3rem] p-2 border border-white/20 dark:border-slate-700 shadow-2xl reveal">
-                    <div class="bg-white/80 dark:bg-slate-800/80 rounded-[2.5rem] p-12 lg:p-16 relative overflow-hidden shadow-inner">
-                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-primary"></div>
-                        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                            <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
-                                <div class="inline-flex items-center gap-3 self-center lg:self-start bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
-                                    <span class="material-symbols-outlined text-primary">account_balance</span>
-                                    <span class="font-bold text-xs text-primary tracking-widest uppercase">Alma Mater</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+                    <!-- HSC Card -->
+                    <div class="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-3xl rounded-[3rem] p-10 border border-white/20 dark:border-slate-700 shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-secondary rounded-t-full"></div>
+                        <div class="flex flex-col gap-8">
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center gap-3 bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
+                                    <span class="material-symbols-outlined text-primary text-sm">school</span>
+                                    <span class="font-bold text-[10px] text-primary tracking-widest uppercase">Higher Secondary Certificate</span>
                                 </div>
-                                <h3 class="font-display text-4xl md:text-5xl text-on-background dark:text-white leading-tight">
-                                    Madhupur Shohid Smrity Higher Secondary School
-                                </h3>
-                                <p class="font-body-lg text-lg text-on-surface-variant dark:text-slate-400 leading-relaxed">A cornerstone of my academic journey, shaping my foundational knowledge and discipline.</p>
+                                <div class="bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-lg text-primary font-bold text-sm">HSC</div>
                             </div>
-                            <div class="shrink-0 relative group">
-                                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-colors duration-500"></div>
-                                <div class="bg-white dark:bg-slate-700 rounded-3xl p-10 border border-slate-100 dark:border-slate-600 shadow-2xl flex flex-col items-center justify-center min-w-[200px] relative z-10 transition-transform duration-500 group-hover:scale-105">
-                                    <span class="font-bold text-xs text-slate-400 uppercase tracking-widest mb-3">Achievement</span>
-                                    <span class="font-display text-6xl text-primary leading-none font-black">GPA 5</span>
-                                    <div class="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg shadow-indigo-500/50">
-                                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                                    </div>
+                            <div>
+                                <h3 class="font-display text-3xl text-on-background dark:text-white mb-4 leading-tight">
+                                    Madhupur Shahid Smrity College
+                                </h3>
+                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Advanced studies focusing on higher education goals and foundational excellence.</p>
+                            </div>
+                            <div class="flex items-center gap-6 pt-4 border-t border-slate-100 dark:border-slate-700">
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Achievement</span>
+                                    <span class="text-3xl font-black text-primary">GPA 5.00</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SSC Card -->
+                    <div class="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-3xl rounded-[3rem] p-10 border border-white/20 dark:border-slate-700 shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary to-primary rounded-t-full"></div>
+                        <div class="flex flex-col gap-8">
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center gap-3 bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
+                                    <span class="material-symbols-outlined text-primary text-sm">account_balance</span>
+                                    <span class="font-bold text-[10px] text-primary tracking-widest uppercase">Secondary School Certificate</span>
+                                </div>
+                                <div class="bg-secondary/10 dark:bg-secondary/20 px-3 py-1 rounded-lg text-secondary font-bold text-sm">SSC</div>
+                            </div>
+                            <div>
+                                <h3 class="font-display text-3xl text-on-background dark:text-white mb-4 leading-tight">
+                                    Madhupur Shahid Smrity Higher Secondary School
+                                </h3>
+                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Foundational schooling that shaped my discipline and initial academic path.</p>
+                            </div>
+                            <div class="flex items-center gap-6 pt-4 border-t border-slate-100 dark:border-slate-700">
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Achievement</span>
+                                    <span class="text-3xl font-black text-primary">GPA 5.00</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                                 </div>
                             </div>
                         </div>
@@ -362,7 +395,7 @@
                                 </div>
                                 <div>
                                     <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Phone Number</p>
-                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">01750241612</p>
+                                    <a href="tel:01750241612" class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug hover:text-primary transition-colors">01750241612</a>
                                 </div>
                             </div>
                             <div class="flex items-start gap-6">
@@ -379,7 +412,13 @@
                     <div class="flex-1 bg-indigo-600 p-12 lg:p-20 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-primary opacity-50 mix-blend-overlay"></div>
                         <div class="w-full max-w-sm aspect-[4/5] bg-white dark:bg-slate-700 p-6 shadow-2xl rotate-3 relative z-10 rounded-2xl group transition-transform duration-500 hover:rotate-0">
-                            <img alt="Map location" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSp-BepxlEKZb6RH3Rk9O7kE06BMDaW1Z8wNkQQl4Jp4NRHaQ_5hbNVc6WQ_Z0w3lnYyk5Mz-zRu7HNp780_YYFbloNszLYeghR6A3dEJokc2kVWotVaK1_HZ1IIQh39fDAgKJvWaD7PwKfohHz8Cmw-dlCSHK5Kl48J7MiVgNrQ4JffZ50muMv2VS2C29i0xLpwQ7Wg3OAmswTiYBKBP-CymdeHrsKE6g_O_9KsMMjWI0CV8Xe8qZKduLTweP2TEwJ13M4mvIBMM"/>
+                            <iframe 
+                                src="https://maps.google.com/maps?q=24.5893101,90.0629960&z=15&output=embed" 
+                                class="w-full h-full object-cover rounded-lg border-0 pointer-events-auto" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -396,8 +435,8 @@
             </div>
             <div class="flex flex-col items-center gap-6">
                 <div class="flex items-center gap-8">
-                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">LinkedIn</a>
-                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="https://www.facebook.com/share/1BorJ9czCD/" target="_blank">Facebook</a>
+                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="https://www.instagram.com/sagar23__28?igsh=MThybXBtY2g0cDdpcA==" target="_blank">Instagram</a>
                     <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">Github</a>
                 </div>
                 <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">© 2024 ALI AZGAR SAGAR. ALL RIGHTS RESERVED.</p>
