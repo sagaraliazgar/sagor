@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ali Azgar Sagar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "tertiary": "#46494b",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#57657a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "primary-container": "#4f46e5",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface-variant": "#464555",
+                        "surface": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-tint": "#4d44e3",
+                        "outline-variant": "#c7c4d8",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#515f74",
+                        "primary": "#3525cd",
+                        "on-tertiary-container": "#dadcde",
+                        "inverse-primary": "#c3c0ff",
+                        "on-primary-fixed": "#0f0069",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-container": "#5e6163",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#d5e3fc",
+                        "on-primary-container": "#dad7ff",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-background": "#1a1c1c",
+                        "outline": "#777587",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "100px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "display": ["Hind Siliguri"],
+                        "headline-lg": ["Hind Siliguri"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hind Siliguri"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container dark:bg-black dark:text-white transition-colors duration-500">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50 shadow-sm font-sans tracking-tight antialiased">
+        <div class="max-w-[1280px] mx-auto px-8 flex justify-between items-center h-20">
+            <a class="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-500 transition-all duration-300 active:scale-95 flex items-center gap-2" href="#">
+                <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white text-sm">AS</span>
+                Ali Azgar Sagar
+            </a>
+            <div class="hidden md:flex items-center gap-gutter">
+                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#core-values">Core Values</a>
+                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#education">Education</a>
+                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#family">Family</a>
+                <a class="text-slate-600 dark:text-slate-300 font-medium hover:text-indigo-500 transition-all duration-300 active:scale-95" href="#hobbies">Hobbies</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary rounded-lg font-semibold hover:bg-surface-tint transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 active:scale-95" href="#contact">Contact Me</a>
+                <button class="md:hidden text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[90vh] flex items-center justify-center px-8 py-section-padding relative overflow-hidden">
+            <div class="absolute top-0 right-0 -z-10 w-[60vw] h-[60vw] bg-primary-container/20 rounded-full blur-[120px] opacity-60 translate-x-1/3 -translate-y-1/4 animate-pulse"></div>
+            <div class="absolute bottom-0 left-0 -z-10 w-[50vw] h-[50vw] bg-secondary-container/30 rounded-full blur-[100px] opacity-60 -translate-x-1/4 translate-y-1/4 animate-pulse"></div>
+            <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-section-padding w-full">
+                <div class="flex-1 flex flex-col gap-stack-lg relative z-10 reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-outline-variant w-fit shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+                        <span class="font-bold text-xs text-on-surface-variant tracking-widest uppercase">Welcome to my world</span>
+                    </div>
+                    <h1 class="font-display text-7xl md:text-8xl text-on-background dark:text-white leading-tight">
+                        Driven by <span class="gradient-text relative inline-block">Purpose</span>,<br/>
+                        Guided by <span class="text-secondary dark:text-secondary-fixed-dim">Values</span>.
+                    </h1>
+                    <p class="font-body-lg text-xl text-on-surface-variant dark:text-slate-400 max-w-2xl leading-relaxed">
+                        I am Ali Azgar Sagar. This space is dedicated to my journey, my family, and the core principles that drive me every day.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-stack-md pt-6">
+                        <a class="inline-flex items-center justify-center px-10 py-5 bg-primary text-on-primary rounded-xl font-bold hover:bg-surface-tint transition-all duration-300 shadow-[0_10px_25px_rgba(53,37,205,0.3)] hover:shadow-[0_15px_35px_rgba(53,37,205,0.4)] hover:-translate-y-1.5 active:scale-95 gap-3" href="#core-values">
+                            Explore My Journey
+                            <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 w-full max-w-lg relative reveal" style="transition-delay: 200ms;">
+                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-2xl border border-white/20 group animate-float">
+                        <img alt="Portrait of Ali Azgar Sagar" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="profile.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl flex items-center justify-center -z-10 rotate-12 animate-float" style="animation-delay: -1s;">
+                        <span class="material-symbols-outlined text-[64px] text-primary opacity-50">flare</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values & Goals -->
+        <section class="py-section-padding px-8 bg-surface-container-lowest dark:bg-slate-900/50" id="core-values">
+            <div class="max-w-container-max mx-auto flex flex-col gap-16">
+                <div class="flex flex-col gap-4 items-center text-center max-w-2xl mx-auto reveal">
+                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Core Values &amp; Goals</h2>
+                    <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400">The fundamental aspirations that shape my decisions and future.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[280px]">
+                    <div class="md:col-span-2 md:row-span-2 group relative bg-white dark:bg-slate-800 rounded-3xl p-10 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-2 reveal">
+                        <div class="absolute top-0 right-0 w-80 h-80 bg-primary-container/5 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/3"></div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-6 shadow-sm">
+                                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-3xl text-on-background dark:text-white mb-4">Financial Independence</h3>
+                                <p class="font-body-md text-lg text-on-surface-variant dark:text-slate-400 max-w-md leading-relaxed">Building financial independence to secure the future, support my family, and have the freedom to pursue meaningful endeavors without constraint.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 100ms;">
+                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                            </div>
+                            <div>
+                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Academic Excellence</h3>
+                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Achieving academic excellence from a recognized institution to build a strong foundation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 200ms;">
+                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">family_home</span>
+                            </div>
+                            <div>
+                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Support Family</h3>
+                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Giving back to those who sacrificed for me, ensuring their comfort and happiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 300ms;">
+                        <div class="relative z-10 flex flex-col h-full justify-between gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shadow-sm">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                            </div>
+                            <div>
+                                <h3 class="font-body-lg text-xl font-bold text-on-background dark:text-white mb-2">Social Impact</h3>
+                                <p class="font-body-md text-on-surface-variant dark:text-slate-400">Using resources to uplift those less fortunate and create positive social impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 group relative bg-inverse-surface rounded-3xl p-10 overflow-hidden shadow-2xl hover:shadow-indigo-900/40 transition-all duration-500 hover:-translate-y-2 reveal" style="transition-delay: 400ms;">
+                        <div class="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-1000">
+                            <img alt="Service background" class="w-full h-full object-cover grayscale mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUPJeG_I5WegQqhhw7p1NazPg4hZCygyJkjtFtGJUopliQR6dhqC6S-1kb8tXpBmd8MamNqhTyh15nVv9daOyZcPgvm6vhGW7e1bmHf7A-6sFYE9RsGZAeUxaaOE4kz9rJiMuGakQJipiCJvKC8tqAnhJ0sSHyxQc9nDGxWfA1c-hg9ZtS1Io2crlcQWRXepP15u7lICUESOPe7Dcu39VqBxsZsdQzU-o6n1DkkBsaDUEvR4RPZVb3-fAaowVuN5UY_VCFq8q5edI"/>
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-lg text-white flex items-center justify-center mb-6 shadow-lg">
+                                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-3xl text-white mb-4">Serving Others</h3>
+                                <p class="font-body-md text-lg text-slate-300 max-w-md leading-relaxed">A commitment to community and humanity, believing that true success includes leaving the world better than I found it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="py-section-padding px-8 relative overflow-hidden" id="education">
+            <div class="absolute inset-0 bg-surface-container-low dark:bg-black -z-20"></div>
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col gap-4 items-center text-center max-w-2xl mx-auto mb-16 reveal">
+                    <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">Education Highlight</h2>
+                </div>
+                <div class="max-w-5xl mx-auto bg-white/40 dark:bg-slate-800/40 backdrop-blur-3xl rounded-[3rem] p-2 border border-white/20 dark:border-slate-700 shadow-2xl reveal">
+                    <div class="bg-white/80 dark:bg-slate-800/80 rounded-[2.5rem] p-12 lg:p-16 relative overflow-hidden shadow-inner">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-primary"></div>
+                        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                            <div class="flex flex-col gap-6 flex-1 text-center lg:text-left">
+                                <div class="inline-flex items-center gap-3 self-center lg:self-start bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-full">
+                                    <span class="material-symbols-outlined text-primary">account_balance</span>
+                                    <span class="font-bold text-xs text-primary tracking-widest uppercase">Alma Mater</span>
+                                </div>
+                                <h3 class="font-display text-4xl md:text-5xl text-on-background dark:text-white leading-tight">
+                                    Madhupur Shohid Smrity Higher Secondary School
+                                </h3>
+                                <p class="font-body-lg text-lg text-on-surface-variant dark:text-slate-400 leading-relaxed">A cornerstone of my academic journey, shaping my foundational knowledge and discipline.</p>
+                            </div>
+                            <div class="shrink-0 relative group">
+                                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-colors duration-500"></div>
+                                <div class="bg-white dark:bg-slate-700 rounded-3xl p-10 border border-slate-100 dark:border-slate-600 shadow-2xl flex flex-col items-center justify-center min-w-[200px] relative z-10 transition-transform duration-500 group-hover:scale-105">
+                                    <span class="font-bold text-xs text-slate-400 uppercase tracking-widest mb-3">Achievement</span>
+                                    <span class="font-display text-6xl text-primary leading-none font-black">GPA 5</span>
+                                    <div class="mt-6 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg shadow-indigo-500/50">
+                                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roots -->
+        <section class="py-section-padding px-8 bg-white dark:bg-slate-900" id="family">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col lg:flex-row gap-20 items-center">
+                    <div class="flex-1 w-full flex flex-col gap-12 reveal">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="font-headline-lg text-5xl text-on-background dark:text-white">My Roots</h2>
+                            <p class="font-body-lg text-xl text-on-surface-variant dark:text-slate-400 leading-relaxed">Everything I am is because of the foundation my parents built for me. They are my inspiration and my guiding light.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div class="flex flex-col gap-6 p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300">
+                                <div class="w-20 h-20 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-inner">
+                                    <span class="material-symbols-outlined text-[40px]">person</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-[10px] text-indigo-500 uppercase tracking-widest mb-2">Father</p>
+                                    <h3 class="font-headline-md text-2xl text-on-background dark:text-white">Hafizur Rahman Hablu</h3>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-6 p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300">
+                                <div class="w-20 h-20 rounded-full bg-pink-100 dark:bg-pink-900/50 flex items-center justify-center text-pink-600 dark:text-pink-400 shadow-inner">
+                                    <span class="material-symbols-outlined text-[40px]">person_3</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-[10px] text-pink-500 uppercase tracking-widest mb-2">Mother</p>
+                                    <h3 class="font-headline-md text-2xl text-on-background dark:text-white">Aklima Khatun Beauty</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full max-w-lg relative reveal" style="transition-delay: 200ms;">
+                        <div class="aspect-square rounded-[3rem] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl relative z-10 rotate-3">
+                            <img alt="Family context" class="w-full h-full object-cover" src="family.jpg"/>
+                        </div>
+                        <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-primary/20 rounded-full -z-10 translate-x-1/4 -translate-y-1/4 blur-3xl opacity-50 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Life Beyond Work (Hobbies) Section -->
+        <section class="py-section-padding px-8 bg-slate-50 dark:bg-black" id="hobbies">
+            <div class="max-w-container-max mx-auto flex flex-col gap-20 items-center">
+                <div class="flex flex-col gap-4 items-center reveal">
+                    <h2 class="text-xs font-black tracking-[0.3em] uppercase text-primary">Life Beyond Work</h2>
+                    <p class="text-3xl font-bold dark:text-white">Hobbies & Interests</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full max-w-5xl reveal">
+                    <div class="flex flex-col items-center gap-6 group">
+                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white">
+                            <span class="material-symbols-outlined text-[40px]">flight_takeoff</span>
+                        </div>
+                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Travelling</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-6 group">
+                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-primary group-hover:text-white">
+                            <span class="material-symbols-outlined text-[40px]">groups</span>
+                        </div>
+                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Socializing</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-6 group">
+                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white">
+                            <span class="material-symbols-outlined text-[40px]">sports_cricket</span>
+                        </div>
+                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Cricket</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-6 group">
+                        <div class="w-24 h-24 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-primary group-hover:text-white">
+                            <span class="material-symbols-outlined text-[40px]">sports_soccer</span>
+                        </div>
+                        <span class="text-lg font-bold text-on-surface-variant dark:text-slate-300">Football</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section class="py-section-padding px-8 bg-white dark:bg-slate-900" id="contact">
+            <div class="max-w-container-max mx-auto reveal">
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row">
+                    <div class="flex-1 p-16 lg:p-20 flex flex-col justify-center gap-10">
+                        <h2 class="text-5xl font-black text-slate-900 dark:text-white">Get in Touch</h2>
+                        <div class="flex flex-col gap-8">
+                            <div class="flex items-start gap-6">
+                                <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center shadow-lg shrink-0">
+                                    <span class="material-symbols-outlined text-2xl">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Present Address</p>
+                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">3/1 Jigatola, Dhanmondi, Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center shadow-lg shrink-0">
+                                    <span class="material-symbols-outlined text-2xl">call</span>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Phone Number</p>
+                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">01750241612</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <div class="w-14 h-14 rounded-2xl bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center shadow-md shrink-0">
+                                    <span class="material-symbols-outlined text-2xl">home</span>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Permanent Address</p>
+                                    <p class="text-slate-800 dark:text-slate-200 font-bold text-xl leading-snug">Madhupur, Tangail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-indigo-600 p-12 lg:p-20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-primary opacity-50 mix-blend-overlay"></div>
+                        <div class="w-full max-w-sm aspect-[4/5] bg-white dark:bg-slate-700 p-6 shadow-2xl rotate-3 relative z-10 rounded-2xl group transition-transform duration-500 hover:rotate-0">
+                            <img alt="Map location" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSp-BepxlEKZb6RH3Rk9O7kE06BMDaW1Z8wNkQQl4Jp4NRHaQ_5hbNVc6WQ_Z0w3lnYyk5Mz-zRu7HNp780_YYFbloNszLYeghR6A3dEJokc2kVWotVaK1_HZ1IIQh39fDAgKJvWaD7PwKfohHz8Cmw-dlCSHK5Kl48J7MiVgNrQ4JffZ50muMv2VS2C29i0xLpwQ7Wg3OAmswTiYBKBP-CymdeHrsKE6g_O_9KsMMjWI0CV8Xe8qZKduLTweP2TEwJ13M4mvIBMM"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-20 border-t mt-20 border-slate-100 dark:border-slate-800 bg-white dark:bg-black">
+        <div class="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <span class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Ali Azgar Sagar</span>
+                <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">PURPOSE-DRIVEN EXCELLENCE.</p>
+            </div>
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex items-center gap-8">
+                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">LinkedIn</a>
+                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors" href="#">Github</a>
+                </div>
+                <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">© 2024 ALI AZGAR SAGAR. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 translate-y-10 transition-all duration-500 hover:-translate-y-1 active:scale-95 z-[60]">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+
+        // Back to top visibility
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
