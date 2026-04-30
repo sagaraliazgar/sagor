@@ -206,40 +206,11 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        /* Custom Cursor */
-        .cursor-dot {
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 100;
-            mix-blend-mode: difference;
-            transition: transform 0.15s ease-out;
-            display: none;
-        }
-
-        @media (min-width: 1024px) {
-            .cursor-dot {
-                display: block;
-            }
-
-            body {
-                cursor: none;
-            }
-
-            a,
-            button {
-                cursor: none;
-            }
-        }
     </style>
 </head>
 
 <body
     class="font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
-    <div class="cursor-dot" id="cursor"></div>
     <nav class="fixed top-6 left-6 right-6 z-50 transition-all duration-500 max-w-[1280px] mx-auto">
         <div class="glass-card rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-xl border-white/20">
             <div class="flex items-center gap-3">
@@ -340,30 +311,62 @@
         <section
             class="max-w-[1280px] mx-auto px-6 py-20 bg-slate-100/50 dark:bg-slate-900/30 rounded-[40px] mb-24 reveal border border-slate-200 dark:border-white/5 backdrop-blur-sm">
             <h2 class="font-headline-lg text-4xl text-center mb-12 dark:text-white">Captured Moments</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
-                <div
-                    class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-down opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.1s;">
-                    <img alt="Personal Moment 1" class="w-full h-full object-cover" src="moment_final_1.jpg" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 md:gap-8">
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="transition-delay: 0.1s;">
+                    <img alt="Personal Moment 1" class="w-full h-full object-cover" src="1000110427.jpg" />
                 </div>
                 <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-8 animate-float-down opacity-0 translate-y-10 reveal-item"
                     style="animation-delay: 1s; transition-delay: 0.2s;">
-                    <img alt="Personal Moment 2" class="w-full h-full object-cover" src="moment_final_2.jpg" />
+                    <img alt="Personal Moment 2" class="w-full h-full object-cover" src="1000110486.jpg" />
                 </div>
                 <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-4 animate-float-down opacity-0 translate-y-10 reveal-item"
                     style="animation-delay: 2s; transition-delay: 0.3s;">
-                    <img alt="Personal Moment 3" class="w-full h-full object-cover" src="moment_final_3.jpg" />
+                    <img alt="Personal Moment 3" class="w-full h-full object-cover" src="1000111033.jpg" />
                 </div>
                 <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-12 animate-float-up opacity-0 translate-y-10 reveal-item"
                     style="animation-delay: 1.5s; transition-delay: 0.4s;">
-                    <img alt="Personal Moment 4" class="w-full h-full object-cover" src="moment_final_4.jpg" />
+                    <img alt="Personal Moment 4" class="w-full h-full object-cover" src="1000111120.jpg" />
                 </div>
                 <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-2 animate-float-up opacity-0 translate-y-10 reveal-item"
                     style="animation-delay: 0.5s; transition-delay: 0.5s;">
-                    <img alt="Personal Moment 5" class="w-full h-full object-cover" src="moment_final_5.jpg" />
+                    <img alt="Personal Moment 5" class="w-full h-full object-cover" src="1000129306.jpg" />
                 </div>
                 <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-6 animate-float-up opacity-0 translate-y-10 reveal-item"
                     style="animation-delay: 2.5s; transition-delay: 0.6s;">
-                    <img alt="Personal Moment 6" class="w-full h-full object-cover" src="personal_moment_6.jpg" />
+                    <img alt="Personal Moment 6" class="w-full h-full object-cover" src="1000129797.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-10 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 0.8s; transition-delay: 0.7s;">
+                    <img alt="Personal Moment 7" class="w-full h-full object-cover" src="1000129813.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-5 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 1.2s; transition-delay: 0.8s;">
+                    <img alt="Personal Moment 8" class="w-full h-full object-cover" src="1000145056.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-9 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 1.8s; transition-delay: 0.9s;">
+                    <img alt="Personal Moment 9" class="w-full h-full object-cover" src="1000153036.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-3 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 0.3s; transition-delay: 1s;">
+                    <img alt="Personal Moment 10" class="w-full h-full object-cover" src="1000155405.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-11 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 2.2s; transition-delay: 1.1s;">
+                    <img alt="Personal Moment 11" class="w-full h-full object-cover" src="1000157098.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-7 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 1.4s; transition-delay: 1.2s;">
+                    <img alt="Personal Moment 12" class="w-full h-full object-cover" src="1000159185.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-1 animate-float-down opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 0.9s; transition-delay: 1.3s;">
+                    <img alt="Personal Moment 13" class="w-full h-full object-cover" src="1000159189.jpg" />
+                </div>
+                <div class="moment-card aspect-[3/4] rounded-2xl overflow-hidden shadow-sm lg:mt-13 animate-float-up opacity-0 translate-y-10 reveal-item"
+                    style="animation-delay: 2.8s; transition-delay: 1.4s;">
+                    <img alt="Personal Moment 14" class="w-full h-full object-cover" src="1000161025.jpg" />
                 </div>
             </div>
         </section>
@@ -764,24 +767,6 @@
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        // Custom Cursor Logic
-        const cursor = document.getElementById('cursor');
-        if (window.innerWidth >= 1024) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
-
-            document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.8)');
-            document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
-
-            const hoverables = document.querySelectorAll('a, button, .bento-card');
-            hoverables.forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(4)');
-                el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
-            });
-        }
     </script>
 </body>
 
